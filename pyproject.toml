@@ -1,0 +1,15 @@
+[project]
+name = "sync-apps-tla"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "Rafael Rios",email = "dev.rafaelrios@outlook.com"},
+]
+dependencies = ["fastapi[standard]>=0.128.8", "todoist-api-python>=3.2.1", "python-dotenv>=1.2.1"]
+requires-python = ">=3.9"
+readme = "README.md"
+license = {text = "MIT"}
+
+
+[tool.pdm]
+distribution = false
