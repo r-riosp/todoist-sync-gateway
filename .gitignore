@@ -6,3 +6,7 @@ __pycache__/
 .pdm-python
 
 .env
+.venv/
+build/
+sync_apps_tla.egg-info/
+pdm.lock
