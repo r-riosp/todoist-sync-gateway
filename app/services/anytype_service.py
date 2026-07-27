@@ -38,7 +38,8 @@ class AnyTypeService():
 
     # def create_space():
 
-    # def create_object():
+    def create_object():
+        pass
 
     # def update_space():
 

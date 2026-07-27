@@ -5,6 +5,7 @@ from app.core.config import config
 from app.core.logging import setup_logging
 
 from app.api.routers import anytype_router, todoist_router
+import app.database.connection as conn
 # from app.api.routers import todoist_router
 # from app.api.routers import linear_router
 
@@ -24,8 +25,6 @@ app.include_router(
 
 @app.get("/", tags=["Health Check"])
 def health_check():
-    """
-    Simple health check endpoint to verify if the API is running.
-    """
     logging.info("Health check endpoint pinged.")
+    conn.get_db_connection()
     return {"status": "ok", "message": "Gateway is running smoothly."}
