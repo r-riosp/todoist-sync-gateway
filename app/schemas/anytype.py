@@ -6,3 +6,8 @@ class AnyTypeSpace(BaseModel):
     name: str
     description: Optional[str] = None    
     object: Optional[str] = None
+
+class ObjectPayload(BaseModel):
+    body: str
+    name: str
+    type_key: str
