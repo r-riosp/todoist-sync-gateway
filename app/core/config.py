@@ -1,6 +1,10 @@
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 class Config(BaseSettings):
+    """
+    Application configuration settings.
+    Handles environment variables and defaults.
+    """
     app_name: str = "Todoist Gateway to AnyType and Linear"
     app_description: str = "Gateway that syncs tasks from Todoist to AnyType and Linear"
     app_version: str = "0.1.0"
@@ -11,13 +15,20 @@ class Config(BaseSettings):
 
     # External API Keys and URLs
     todoist_api_key: str
+
     anytype_api_key: str
     anytype_base_url: str
+    anytype_space_id: str
+
+    # Linear Configuration
+    linear_api_key: str
+    linear_team_id: str
+    linear_state_id: str
 
     model_config = SettingsConfigDict(
         env_file=".env",
         env_file_encoding="utf-8",
         extra="ignore"
     )
-    
+
 config = Config()

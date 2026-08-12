@@ -5,7 +5,7 @@ description = "Default template for PDM package"
 authors = [
     {name = "Rafael Rios",email = "dev.rafaelrios@outlook.com"},
 ]
-dependencies = ["fastapi[standard]>=0.128.8", "todoist-api-python>=3.2.1", "python-dotenv>=1.2.1"]
+dependencies = ["fastapi[standard]>=0.128.8", "todoist-api-python>=3.2.1", "python-dotenv>=1.2.1", "gql[httpx]>=4.0.0"]
 requires-python = ">=3.9"
 readme = "README.md"
 license = {text = "MIT"}

@@ -1,5 +1,6 @@
-from fastapi import APIRouter, Depends, Body  
+from fastapi import APIRouter, Depends, Body
 
+from app.schemas.task import Task
 from app.services.gateway_service import GatewayService
 from app.database.sqlite_task_repository import SQLiteTaskRepository
 from app.database.connection import get_db_connection

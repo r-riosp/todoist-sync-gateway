@@ -1,7 +1,6 @@
 import logging
 
-def setup_logging():
-    logging.basicConfig(
-        level=logging.DEBUG,
-        format="%(asctime)s [%(levelname)s] %(message)s"
-    ) 
+
+def setup_logging() -> logging.Logger:
+    """Return the application logger configured by Uvicorn."""
+    return logging.getLogger("uvicorn.error")
